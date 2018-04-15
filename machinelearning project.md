@@ -109,20 +109,151 @@ fitRF = predict(modelRF, testing)
 
 ## KNN vs. RF
 
- <img src="./knn.png";>
+ Confusion Matrix and Statistics
  
+           Reference
+ 
+ Prediction    A    B    C    D    E
+ 
+          A 1360    8   12   16    7
+
+          B   37  834   27   24   25
+
+          C   14   31  780   22    9
+
+          D    9    3   56  721   14
+
+          E   14   33   22   36  790
+ 
+ Overall Statistics
+                                         
+                Accuracy : 0.915         
+                  95% CI : (0.906, 0.922)
+     No Information Rate : 0.292         
+     P-Value [Acc > NIR] : < 2e-16       
+                                         
+                   Kappa : 0.892         
+  Mcnemar's Test P-Value : 3.1e-11       
+ 
+ Statistics by Class:
+ -------------------  -------- -------  -------  -------- --------
+                      Class: A Class: B Class: C Class: D Class: E
+                      
+ Sensitivity             0.948    0.917    0.870    0.880    0.935
+ 
+ Specificity             0.988    0.972    0.981    0.980    0.974
+ 
+ Pos Pred Value          0.969    0.881    0.911    0.898    0.883
+ 
+ Neg Pred Value          0.979    0.981    0.971    0.976    0.986
+ 
+ Prevalence              0.292    0.185    0.183    0.167    0.172
+ 
+ Detection Rate          0.277    0.170    0.159    0.147    0.161
+ 
+ Detection Prevalence    0.286    0.193    0.175    0.164    0.183
+ 
+ Balanced Accuracy       0.968    0.945    0.925    0.930    0.955
+ 
+ -------------------    ------   ------   ------   ------- -------
+
 ## KNN vs. test set
 
- <img src="./testset.png";>
+ Confusion Matrix and Statistics
+ 
+           Reference
+ Prediction    A    B    C    D    E
+ 
+          A 1354   44   13    9   14
+          
+          B    6  835   32    3   33
+          
+          C   12   25  779   59   22
+          
+          D   16   24   20  723   36
+          
+          E    7   21   11   10  796
+ 
+ Overall Statistics
+                                         
+                Accuracy : 0.915         
+                  95% CI : (0.907, 0.923)
+     No Information Rate : 0.284         
+     P-Value [Acc > NIR] : < 2e-16       
+                                         
+                   Kappa : 0.892         
+  Mcnemar's Test P-Value : 3.91e-15      
+ 
+ Statistics by Class:
+ -------------------  -------- -------  -------  -------- --------
+                      Class: A Class: B Class: C Class: D Class: E
+                      
+ Sensitivity             0.971    0.880    0.911    0.899    0.883
+ 
+ Specificity             0.977    0.981    0.971    0.977    0.988
+ 
+ Pos Pred Value          0.944    0.919    0.868    0.883    0.942
+ 
+ Neg Pred Value          0.988    0.971    0.981    0.980    0.974
+ 
+ Prevalence              0.284    0.194    0.174    0.164    0.184
+ 
+ Detection Rate          0.276    0.170    0.159    0.147    0.162
+ 
+ Detection Prevalence    0.292    0.185    0.183    0.167    0.172
+ 
+ Balanced Accuracy       0.974    0.931    0.941    0.938    0.936
+-------------------    ------   -------  -------   ------- -------
 
 ## RF vs. test set
 
- <img src="./rff.png";>
+  Confusion Matrix and Statistics
  
+           Reference
+ Prediction    A    B    C    D    E
+ 
+          A 1395    8    0    0    0
+          
+          B    0  940    7    0    0
+          
+          C    0    1  845   10    0
+          
+          D    0    0    3  794    6
+          
+          E    0    0    0    0  895
+ 
+ Overall Statistics
+                                        
+                Accuracy : 0.993        
+                  95% CI : (0.99, 0.995)
+     No Information Rate : 0.284        
+     P-Value [Acc > NIR] : <2e-16       
+                                        
+                   Kappa : 0.991        
+  Mcnemar's Test P-Value : NA           
+ 
+ Statistics by Class:
+ -------------------  -------- -------  -------  -------- --------
+                      Class: A Class: B Class: C Class: D Class: E
+                      
+ Sensitivity             1.000    0.991    0.988    0.988    0.993
+ 
+ Specificity             0.998    0.998    0.997    0.998    1.000
+ 
+ Pos Pred Value          0.994    0.993    0.987    0.989    1.000
+ 
+ Neg Pred Value          1.000    0.998    0.998    0.998    0.999
+ 
+ Prevalence              0.284    0.194    0.174    0.164    0.184
+ 
+ Detection Rate          0.284    0.192    0.172    0.162    0.183
+ 
+ Detection Prevalence    0.286    0.193    0.175    0.164    0.183
+ 
+ Balanced Accuracy       0.999    0.994    0.993    0.993    0.997
+ -------------------    ------   -------  -------   ------- -------
+
 The random forest fit is clearly more accurate than the k-nearest neighbors method with 99% accuracy.
 
-# Submit
-Finally, I use the random forest model to preduct on the 20 cases submitted to coursera.
 
-<img src="./submit.png";>
 
